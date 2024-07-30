@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="parent-container">
+      <h1 class="title">Expenses Tracker</h1>
+      <div class="tracker-container">
+        <div class="input-box">
+          <form id="expense-form">
+            <label for="category">Category:</label>
+            <select name="category" id="category">
+              <option value="Food and beverage">Food & Beverage</option>
+              <option value="Rent">Rent</option>
+              <option value="Transport">Transport</option>
+              <option value="Check-up">Monthly check-up</option>
+            </select>
+            <label for="amount">Amount:</label>
+            <input type="number" step="any" name="amount" id="amount" />
+            <label for="date">Date:</label>
+            <input type="date" name="date" id="date" />
+            <button type="submit" class="add-button">ADD</button>
+          </form>
+        </div>
+
+        <div class="list-container">
+          <h1>Expenses List</h1>
+
+          <table class="expenses-list">
+            <thead id="thead">
+              <tr>
+                <th>Category</th>
+                <th>Amount</th>
+                <th>Date</th>
+                <th>Delete</th>
+              </tr>
+            </thead>
+            <tbody class="table-body">
+              <tr>
+                <td>Total</td>
+                <td id="total"></td>
+                <td></td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

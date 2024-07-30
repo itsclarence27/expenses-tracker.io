@@ -1,0 +1,244 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  background-color: #fce4dc;
+}
+
+@media only screen and (max-width: 600px) {
+  .title {
+    margin: 0;
+    width: 100%;
+    color: white;
+    background-color: #5c639c;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .parent-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tracker-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .input-box {
+    background-color: #24244b;
+    box-shadow: 10px 10px 5px -3px rgba(0, 0, 0, 0.46);
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 500px; /* Adjust to prevent stretching on very small screens */
+  }
+
+  #expense-form {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    gap: 10px;
+    font-size: 14px;
+    color: white;
+  }
+
+  #expense-form label {
+    margin-bottom: 5px;
+  }
+
+  #expense-form input,
+  #expense-form select {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+  }
+
+  #expense-form input:focus,
+  #expense-form select:focus {
+    outline: none;
+  }
+
+  .add-button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    font-weight: bold;
+    background-color: #587edf;
+    color: white;
+    border-radius: 5px;
+  }
+
+  .add-button:hover {
+    cursor: pointer;
+    background-color: #4a6ab0;
+    box-shadow: 3px 3px black;
+  }
+
+  .list-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: #8f9ec8;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 5px -3px rgba(0, 0, 0, 0.46);
+    margin-top: 20px;
+  }
+
+  .expenses-list {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  .expenses-list th {
+    background-color: #24244b;
+    color: white;
+  }
+
+  .expenses-list th,
+  .expenses-list td {
+    border: solid 1px black;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .delete-btn {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+
+  .delete-btn:hover {
+    background-color: darkred;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .title {
+    margin: 0;
+    width: 100%;
+    color: white;
+    background-color: #5c639c;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .parent-container {
+    width: 100%;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tracker-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    top: 20px;
+  }
+
+  .input-box {
+    background-color: #24244b;
+    box-shadow: 10px 10px 5px -3px rgba(0, 0, 0, 0.46);
+    -webkit-box-shadow: 10px 10px 5px -3px rgba(0, 0, 0, 0.46);
+    -moz-box-shadow: 10px 10px 5px -3px rgba(0, 0, 0, 0.46);
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  #expense-form {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    font-size: 20px;
+    color: white;
+  }
+
+  #expense-form input {
+    padding: 5px;
+    border: none;
+  }
+
+  #expense-form input:focus {
+    outline: none;
+  }
+
+  .add-button {
+    width: 50px;
+    padding: 5px;
+    border: none;
+    font-weight: bold;
+    background-color: #587edf;
+    color: white;
+  }
+
+  .add-button:hover {
+    cursor: pointer;
+    translate: -3px -3px;
+    box-shadow: 3px 3px black;
+  }
+
+  .list-container {
+    position: relative;
+    top: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #8f9ec8;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 5px -3px rgba(0, 0, 0, 0.46);
+    -webkit-box-shadow: 10px 10px 5px -3px rgba(0, 0, 0, 0.46);
+    -moz-box-shadow: 10px 10px 5px -3px rgba(0, 0, 0, 0.46);
+  }
+
+  .expenses-list {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .expenses-list th {
+    background-color: #24244b;
+    color: white;
+  }
+
+  .expenses-list th,
+  td {
+    border: solid 1px black;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .delete-btn {
+    background-color: red;
+    color: white;
+    border: 1px solid black;
+    padding: 5px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  .delete-btn:hover {
+    background-color: darkred;
+  }
+}
